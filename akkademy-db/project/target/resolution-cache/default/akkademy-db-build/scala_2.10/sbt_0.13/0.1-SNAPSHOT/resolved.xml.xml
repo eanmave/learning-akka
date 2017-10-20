@@ -4,7 +4,7 @@
 		module="akkademy-db-build"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20171020101547"
+		publication="20171020123255"
 		e:sbtVersion="0.13" e:scalaVersion="2.10"
 	>
 		<description>
