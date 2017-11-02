@@ -7,7 +7,7 @@ import java.util.concurrent.CompletableFuture;
 /**
  * @author amarinv@psl.com.co on 10/20/2017.
  */
-public class JClientIntegrationSpec {
+public class JClientIntegrationTest {
 
   JClient client = new JClient("127.0.0.1:2552");
 
