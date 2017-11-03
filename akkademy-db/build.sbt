@@ -12,3 +12,7 @@ libraryDependencies ++= Seq(
   "com.typesafe.akka" %% "akka-remote" % akkaVersion,
   "junit" % "junit" % "4.12"
 )
+
+mappings in (Compile, packageBin) ~= { _.filterNot { case (_, name) =>
+  Seq("application.conf").contains(name)
+}}

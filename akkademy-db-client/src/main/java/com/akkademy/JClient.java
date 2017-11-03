@@ -5,7 +5,6 @@ import akka.actor.ActorSystem;
 import akka.pattern.PatternsCS;
 import com.akkademy.message.GetRequest;
 import com.akkademy.message.SetRequest;
-import scala.compat.java8.FutureConverters;
 
 import java.util.concurrent.CompletionStage;
 
@@ -13,8 +12,7 @@ import java.util.concurrent.CompletionStage;
  * @author amarinv@psl.com.co on 10/20/2017.
  */
 public class JClient {
-  private final ActorSystem system = ActorSystem.
-      create("LocalSystem");
+  private final ActorSystem system = ActorSystem.create("system");
   private final ActorSelection remoteDb;
 
   public JClient(String remoteAddress) {
@@ -26,6 +24,6 @@ public class JClient {
   }
 
   public CompletionStage<Object> get(String key) {
-    return PatternsCS.ask(remoteDb, new GetRequest(key), 2000);
+    return PatternsCS.ask(remoteDb, new GetRequest(key), 5000);
   }
 }

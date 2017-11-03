@@ -10,8 +10,8 @@ import com.typesafe.config.ConfigFactory;
  */
 public class App {
   public static void main(String[] args) {
-    Config config = ConfigFactory.load("application.conf");
-    ActorSystem system = ActorSystem.create("akkademy", config);
+   // Config config = ConfigFactory.load("application.conf");
+    ActorSystem system = ActorSystem.create("akkademy");
     system.actorOf(Props.create(AkkademyDb.class), "akkademy-db");
   }
 }
