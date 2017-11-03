@@ -12,7 +12,7 @@ import java.util.concurrent.CompletionStage;
  * @author amarinv@psl.com.co on 10/20/2017.
  */
 public class JClient {
-  private final ActorSystem system = ActorSystem.create("system");
+  private final ActorSystem system = ActorSystem.create("MyLocalSystem");
   private final ActorSelection remoteDb;
 
   public JClient(String remoteAddress) {

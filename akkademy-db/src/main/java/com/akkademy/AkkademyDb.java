@@ -33,7 +33,7 @@ public class AkkademyDb extends AbstractActor {
   }
 
   private void handleSetRequest(SetRequest message) {
-    log.info("Received set request – key: {} value: {}", message.getKey(), message.getValue());
+    log.info("Received set request key: {} value: {}", message.getKey(), message.getValue());
     map.put(message.getKey(), message.getValue());
     sender().tell(new Status.Success(message.getKey()), self());
   }
